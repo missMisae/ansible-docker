@@ -1,4 +1,4 @@
-# Ansible Tutorial 
+# Ansible
 
 ## Installing Ansible 
 
