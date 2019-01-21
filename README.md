@@ -19,14 +19,25 @@
 
 #### success! 
 
-## What is ansible? 
+## What is Ansible? 
 
 * IT automation and orchestration engine meaning...
   * ansible is a simple **automation language** that allows you to describe an IT application infastructure with *playbooks* 
   * automation engine **runs** the playbooks 
-## What makes ansible so baller? 
+## What Makes Ansible so Baller? 
 * Ansible is **Agentless** meaning... 
   * no agents or softwares need to be installed on the systems your automating on, only the control node needs to have ansible installed
 * ansible is not painful to read- very simpple syntax 
 * ansible can be powerful 
 
+## How to Run it? 
+
+#### Ad-hoc
+> ansible <inventory> -m 
+ 
+#### Playbooks 
+> ansible-playbook sample_playbook.yml
+
+#### Automation Framework
+> Ansible Tower
+ 
