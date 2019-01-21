@@ -24,3 +24,8 @@
 * IT automation and orchestration engine meaning...
   * ansible is a simple **automation language** that allows you to describe an IT application infastructure with *playbooks* 
   * automation engine **runs** the playbooks 
+## What makes ansible so baller? 
+* Ansible is **Agentless** meaning... 
+  * no agents or softwares need to be installed on the systems your automating on, only the control node needs to have ansible installed
+  * it's not painful to read- very simpple syntax 
+  * it's powerful 
