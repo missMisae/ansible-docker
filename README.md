@@ -2,8 +2,8 @@
 
 ## Installing Ansible 
 
-### #get updates 
-### sudo apt-get updpate
+#### get updates 
+#### >sudo apt-get updpate
 
 ### #install packages
 ### sudo apt-get install software-properties-common
