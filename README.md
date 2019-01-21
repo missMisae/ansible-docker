@@ -29,3 +29,4 @@
   * no agents or softwares need to be installed on the systems your automating on, only the control node needs to have ansible installed
 * ansible is not painful to read- very simpple syntax 
 * ansible can be powerful 
+
