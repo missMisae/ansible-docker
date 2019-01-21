@@ -27,5 +27,5 @@
 ## What makes ansible so baller? 
 * Ansible is **Agentless** meaning... 
   * no agents or softwares need to be installed on the systems your automating on, only the control node needs to have ansible installed
-  * it's not painful to read- very simpple syntax 
-  * it's powerful 
+* ansible is not painful to read- very simpple syntax 
+* ansible can be powerful 
