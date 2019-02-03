@@ -1,0 +1,43 @@
+---
+- name: build and link containers
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: install python modules
+    pip:
+      name: "{{item}}"
+      state: present
+    with_items:
+      - docker-py==1.10.6
+      - docker-compose==1.9.0
+
+  - name: build mysql image
+    docker_image:
+      path: ./mysql
+      name: mysqlimage
+      tag: sqltag
+
+  - name: build php image
+    docker_image:
+      path: ./php
+      name: phpimage
+      tag: phptag
+
+  - name: create mysql container
+    docker_container:
+      name: mysqlcontainer
+      image: mysqlimage
+      volumes:
+        - /data
+      networks:
+        - name: "{{my-net}}"
+
+  - name: create php container and link to mysqlContainer
+    docker_container:
+      name: phpcontainer
+      image: phpimage
+      networks:
+        - name: "{{my-net}}"
+          links:
+            - mysqlcontainer
