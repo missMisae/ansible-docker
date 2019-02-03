@@ -47,6 +47,6 @@
 * I will be deploying containers locally, I don't have access to remote servers. Thus, I needed to create a cfg file in my local git repository to tell ansible- *"hey- I wont be using the global /etc/ansible/hosts file, I will be using the hosts file in this directory."* 
 ### hosts
 * This is the hosts file I was refering to above, which is just pointing to my localhost
-### playbook.yml
+### checkLocalhostPlaybook.yml
 * this yml file served to demonstarte that this configuration works and that ansible is reporting to my localhost! 
 
