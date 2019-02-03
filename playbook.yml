@@ -1,0 +1,8 @@
+---
+- name: run all playbooks on localhost
+  hosts: all
+  become: yes
+  tasks:
+
+  - name: print out hostname of target
+    command: hostname
