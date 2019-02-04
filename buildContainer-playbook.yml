@@ -12,11 +12,13 @@
       - docker-py==1.10.6
       - docker-compose==1.9.0
 
+
   - name: build mysql image
     docker_image:
       path: ./mysql
       name: mysqlimage
       tag: sqltag
+
 
   - name: build php image
     docker_image:
@@ -24,19 +26,20 @@
       name: phpimage
       tag: phptag
 
+
   - name: create mysql container
     docker_container:
       name: mysqlcontainer
-      image: mysqlimage
-      volumes:
-        - /data
+      image: mysqlimage:sqltag
       networks:
         - name: "{{my-net}}"
+
+
 
   - name: create php container and link to mysqlContainer
     docker_container:
       name: phpcontainer
-      image: phpimage
+      image: phpimage:phptag
       networks:
         - name: "{{my-net}}"
           links:
