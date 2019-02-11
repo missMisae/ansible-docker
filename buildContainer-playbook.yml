@@ -12,12 +12,12 @@
       - docker-py==1.10.6
       - docker-compose==1.9.0
 
-
   - name: build mysql image
     docker_image:
       path: ./mysql
       name: mysqlimage
       tag: sqltag
+
 
 
   - name: build php image
@@ -32,8 +32,19 @@
       name: mysqlcontainer
       image: mysqlimage:sqltag
       networks:
-        - name: "{{my-net}}"
+        - name: bridge
 
+  - name: sleep
+    shell: "sleep 15"
+
+  - name: sql command
+    shell: "docker exec -i mysqlcontainer mysql -uroot -ppass4root < mysql/createuser.sql"
+
+  - name: sql command
+    shell: "docker exec -i mysqlcontainer mysql -ucsci459 -pcsci459 < mysql/createdata.sql"
+
+  - name: sql command
+    shell: 'docker exec -i mysqlcontainer mysql -ucsci459 -pcsci459 -e "select * from testdb.testtab;"'
 
 
   - name: create php container and link to mysqlContainer
@@ -41,6 +52,8 @@
       name: phpcontainer
       image: phpimage:phptag
       networks:
-        - name: "{{my-net}}"
+        - name: bridge
           links:
             - mysqlcontainer
+      ports:
+        - "8080:80"
