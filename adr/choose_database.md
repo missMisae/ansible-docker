@@ -18,5 +18,5 @@
   * *example: an insert and delete cannot happen at the same time* 
   * **Durable:** the results of a transaction are permanent
   * *example: values do not revert to old values once updated* 
-  
-  
+### Decision: There is no change to the implementation fo the database, this is the out-of-box implementation of mysql
+### Consequences: Acid Transactions can be considered "pessimistic" and not as flexible as base transactions. 
