@@ -47,4 +47,16 @@ https://www.tricksofthetrades.net/2017/10/02/ansible-local-playbooks/
 
 ## Explanation of Files in this Repo
 
-
+#### php directory 
+* all files relevant to CRUD operations 
+* PHP dockerfile
+####  mysql directory
+* mySQL dockerfile
+* create user and create data sql file
+#### buildContainer-playbook.yml
+* an ansible script to build two images, two containers a network and link containers. 
+* run by ansible-playbook -K buildContainer-playbook.yml
+#### checkLocalhostPlaybook.yml
+* an ansible script that verifies the client ansible is deploying to- in this repo local
+#### clean-docker.sh
+* a bash script to clean docker containers and images for the sake of building/rebuilding images and containers to get it right.
