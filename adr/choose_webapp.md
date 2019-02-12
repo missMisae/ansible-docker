@@ -17,3 +17,10 @@
 * Example: 
 > say that our PHP web application reflects a libarary mangement system, the librarian must be able to add books to a library members checkout list, delete books from library members checkout list once returned, update a library members contact information, or view books that are checked out or member contact information. 
 ### Consequences: extending the web application to support CRUD operations increases the complexity of the application and requires more time and effort to manage and maintain the system.
+
+## Title: Choose MVC Design Pattern for application
+### Status: ACCEPTED
+### Context: MVC pattern will allow the application to function in an efficient manner. 
+* Model: The representation of the data (MySQL database)
+* View: The UI (php code to present the database and its content inside the browser)
+* Controller: The "glue" connecting the model and view (The SQL queries)
