@@ -60,3 +60,7 @@ https://www.tricksofthetrades.net/2017/10/02/ansible-local-playbooks/
 * an ansible script that verifies the client ansible is deploying to- in this repo local
 #### clean-docker.sh
 * a bash script to clean docker containers and images for the sake of building/rebuilding images and containers to get it right.
+#### To View This Container in your broswer
+* clone the repo 
+* run the buildContainer-playbook.yml file 
+* navigate to your browswer and type localhost:8080 in your search bar
