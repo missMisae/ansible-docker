@@ -1,11 +1,12 @@
+<h1>my webpage</h1>
 <?php
-$servername = "172.17.0.2";
+$host = "172.20.240.1";
 $username = "csci459";
 $password = "csci459";
 $dbname = "testdb";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($host, $username, $password);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
