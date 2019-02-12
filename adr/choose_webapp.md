@@ -24,3 +24,5 @@
 * Model: The representation of the data (MySQL database)
 * View: The UI (php code to present the database and its content inside the browser)
 * Controller: The "glue" connecting the model and view (The SQL queries)
+### Decision: The change proposed to the current implmentation is to organize files in such a way that the model, view & controller are isolated. 
+### Consequences: employing the MVC can add another layer of abstraction to the application. 
