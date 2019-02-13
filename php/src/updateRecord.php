@@ -1,4 +1,4 @@
-<h1>Delete</h1>
+<h1>Update</h1>
 <link rel="stylesheet" href="css/style.css">
 <?php
 $host = "172.20.240.1";
@@ -29,7 +29,7 @@ if(mysqli_num_rows($result) > 0 ){
 	echo "<tr>";
 	echo "<td>" . $row['name'] . "</td>";
 	echo "<td>" . $row['id'] . "</td>";
-	echo "<td><a href='delete.php?id=$id'><strong> Delete </strong></a></td>";
+	echo "<td><a href='update.php?id=$id'><strong> Update</strong></a></td>";
 	echo "</tr>";
 }
 }
